@@ -1,0 +1,213 @@
+main, main > div{
+    width: 100%;
+    height: 100vh;
+    display: flex !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(47,47, 47);
+    padding: 0.5rem;
+ }
+
+/*header*/
+header{
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #006545;
+    background-color: white;
+}
+
+nav{
+    display: flex;
+    gap: 1vw;
+}
+
+main {
+    background-image: url(../img/montaña-main.jpg);
+    object-position: center;
+    object-fit: cover;
+    
+}
+
+
+form{
+    padding: 2rem;
+    background: #ffffff;
+    width: 500px;
+    height: auto;
+    border-radius: 0rem 2rem 0rem 2rem;
+}
+
+.margin__input{
+    margin: 0.7rem;
+    display: block;
+}
+
+input{
+    border-radius: 0.2rem;
+    border: 0;
+    padding: 0.5rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+}
+
+ .btn_entrar{
+    display: flex;
+    justify-content: center;
+}
+[type="submit"]{
+    width: 10rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    color: #006545;
+    font-weight: bold;
+    border: solid 2px #006545 ;
+    cursor: pointer;
+}
+
+legend{
+    color: #006545;
+    padding: 0.2rem !important;
+}
+ 
+
+.verde{
+    color: #006545;
+}
+
+.iniciar_crear_sesion nav a{
+    color: white;
+    background: #006545;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.iniciar_crear_sesion nav a:first-child, .iniciar_crear_sesion nav a:hover{
+    transition: all 1s linear;
+    background: #006545;
+}
+
+
+
+
+.warning_not_vali{
+    color: rgb(255, 198, 192) ;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    }  
+    
+    .red_vali{
+    background:  rgb(255, 198, 192) !important;
+    }
+    
+
+    .fondo-oscuro {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgb(101 101 101 / 40%);
+    }
+    /*footer*/
+    footer div {
+        margin: 0 auto;
+        width: 100% ;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: 768px) {
+        footer .d-flex {
+            width: 76%;
+        }
+    }
+
+    /*tipo radio */
+    
+.wrapper{
+    display: inline-flex;
+    /* background: #fff; */
+    /* height: 100px; */
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    padding: 20px 0px;
+}
+.wrapper .option{
+  background: #fff;
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot{
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #099c6d;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2,
+#option-3:checked:checked ~ .option-3{
+  border-color: #006545;
+  background:#006545;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot,
+#option-3:checked:checked ~ .option-3 .dot{
+  background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before,
+#option-3:checked:checked ~ .option-3 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 20px;
+  color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span,
+#option-3:checked:checked ~ .option-3 span{
+  color: #fff;
+}
+
+.dot + span{
+    margin-left: 0.5rem;
+}
+
+
+main div img {
+    object-fit: cover;
+}

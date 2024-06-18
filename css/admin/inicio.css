@@ -1,0 +1,13 @@
+
+       :root{
+        --color-gris : rgb(239 239 239);
+       }
+
+       .text_gris{
+        color: var(--color-gris);
+       }
+
+       .styles-boton__usuario:hover{
+          color: rgb(234,255,246),0.3;
+       }
+ 

@@ -1,0 +1,234 @@
+
+@font-face {
+    font-family: "HussarBoldWeb";
+    src: url("./font/HussarBoldWeb-bf92.woff") format("woff");
+    font-display: swap;
+}
+
+    
+*{
+    font-family: 'HussarBoldWeb', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nova Square', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+[aria-expanded="true"]{
+    background: rgb(26 139 87) !important;
+    color: white !important;
+}
+
+nav{
+    display: flex;
+    gap: 1vw;
+}
+
+.verde{
+    color: #8ab33d;
+}
+
+.estilos_boton{
+    color: white;
+    background: rgb(26 139 87) !important;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.iniciar_crear_sesion nav a:first-child, .iniciar_crear_sesion nav a:hover{
+    transition: all 1s linear;
+    background: rgb(142, 182, 69);
+}
+
+
+nav a{
+    text-decoration: none;
+    color: rgb(47,47, 47);
+    padding: 0.5rem;
+ }
+
+
+
+
+ /*banner*/
+
+ .position-absolute span{
+    margin: 0.5rem;
+ }
+
+ .position-absolute h1{
+    margin: 0.3rem;
+ }
+
+
+main div img {
+    object-fit: cover;
+}
+ 
+.detalls{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    
+    position:absolute;
+    background-position:  center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .detalls h1{
+        padding: 0.5rem;
+        color:  #fca345;
+        font-weight: bold;
+     
+    }
+    
+    .detalls p{
+    color: white;
+    font-weight: 300;
+    
+    }
+    
+    
+    img{
+    width: 100%;
+    height: auto;
+    object-position: center center;
+    object-fit: cover;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .questions section{
+        width: 100%; 
+        height: auto;
+    }
+    
+    .questions section p{
+        overflow: hidden;
+        max-height: 0;
+        text-align: justify;
+        color:rgb(29, 29, 29);
+        transition: all 0.2s linear;
+        padding-left: 1rem;
+        transition: all 2s ease-in-out;
+        color:white;
+    }
+    
+    .questions section a{
+        text-decoration: none;
+        display: block; 
+        color:rgb(27, 27, 27); 
+       
+        font-weight: bold;
+       
+        text-align: start;
+        padding-left: 1rem;
+    }
+    
+    section:target p{
+        max-height: 10rem;
+        
+    }
+    
+    section:target a {
+        cursor: pointer;
+       background-color: rgb(195, 239, 129);
+    }
+     
+    
+    .questions1 section{
+        width: 100%; 
+        height: auto;
+    }
+    
+    .questions1 section p{
+        overflow: hidden;
+        max-height: 0;
+        text-align: justify;
+        color:rgb(29, 29, 29);
+        transition: all 0.2s linear;
+        padding-left: 1rem;
+        transition: all 2s ease-in-out;
+        color:white;
+    }
+    
+    .questions1 section a{
+        text-decoration: none;
+        display: block; 
+        color:rgb(27, 27, 27); 
+       
+        font-weight: bold;
+       
+        text-align: start;
+        padding-left: 1rem;
+    }
+    
+    section:target p{
+        max-height: 20rem !important;
+        
+    }
+
+    .pink {
+        color: rgb(213, 88, 152);
+    }
+
+    .scroll {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background-color: rgb(26 139 87);
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 10%;
+        vertical-align: middle;
+        text-decoration: none;
+        text-align: center;
+        transition: 0.2s ease-out;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        color: #FFF;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 1s ease-out;
+        color: white;
+    }
+    
+    .scroll:hover {
+        color: rgb(13,54 , 156);
+        cursor: pointer;
+    }
+
+    
+    .hidden {
+        visibility: hidden;
+        opacity: 0;
+    }

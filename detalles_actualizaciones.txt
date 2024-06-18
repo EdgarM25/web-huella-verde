@@ -1,0 +1,16 @@
+v1.0.1 Se pudo realizar dos vistas: crear una cuenta e iniciar sesion.
+v.1.0.2  se pudo realizar el index.html 
+v.1.0.3 se pudo  realizar el esquema de la base de datos del sistema. 
+v.1.0.4 se pudo codificar la base de datos.
+v.2  se pudo realizar la primera vista para el aprendizaje básico. 
+     se pudo realizar la primera vista para el aprendizaje intermedio.
+     se pudo realizar la primera vista para el aprendizaje avanzado.
+     se pudo realizar la vista para los modulos para el aprendizaje básico. 
+     se pudo realizar la vista para los modulos para el aprendizaje intermedio. 
+     se pudo realizar la vista para los modulos  para el aprendizaje avanzado.
+v3 se pudo realizar todas las vistas para el admin. 
+   se pudo realizar como la primera mirada al aprendizaje del usuario.
+ 
+
+HTML, CSS, JAVASCRIPT, BOOTSTRAP Y TYPESCRIPT: FRONT END. 
+PHP Y MYSQL: 
