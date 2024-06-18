@@ -1,1 +1,1 @@
-Aplicacion Web como herramienta para la educacion ambiental sostenible. 
+Desarrollo de una aplicación web como herramienta para el estudio de educación ambiental sostenible.
