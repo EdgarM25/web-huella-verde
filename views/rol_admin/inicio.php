@@ -1,3 +1,7 @@
+<?php
+  include_once("../../php/admin.php");
+?>
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -118,36 +122,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Edgar</td>
-                      <td>Maldonado</td>
-                      <td>Edgar_Maldonado_3</td>
-                      <td>edgarm@gmail.com</td>
-                      <td>:0</td>
-                      <td>Prueba</td>
-                      <td>Bàsico</td>
-                      <td>Activo</td>
-                      <td>
-                        <button type="button" class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#exampleModal-2" data-bs-whatever="@mdo"><i class="bi bi-pencil-square text-darke"></i></button>
-                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#confirmar"><i class="bi bi-trash"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">1</th>
-                        <td>Edgar</td>
-                        <td>Maldonado</td>
-                        <td>Edgar_Maldonado_3</td>
-                        <td>edgarm@gmail.com</td>
-                        <td>prueba</td>
-                        <td>:0</td>
-                        <td>Bàsico</td>
-                        <td>Activo</td>
-                        <td>
-                          <button type="button" class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#exampleModal-2" data-bs-whatever="@mdo"><i class="bi bi-pencil-square text-darke"></i></button>
-                          <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#confirmar"><i class="bi bi-trash"></i></button>
-                        </td>
-                      </tr>
+                    <?php listar(); ?>
                   </tbody>
                 </table>
         </section>
@@ -162,47 +137,47 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <di class="modal-body">
-                  <form>
+                  <form method="POST" action="../../php/admin.php">
+                    <input type="hidden" value="1" name="call" class="form-control" id="recipient-name">
                     <div class="mb-1">
                       <label for="recipient-name" class="col-form-label">Nombre:</label>
-                      <input type="text" class="form-control" id="recipient-name">
+                      <input type="text" name="nombre" class="form-control" id="recipient-name">
                     </div>
                     <div class="mb-1">
                       <label for="recipient-name" class="col-form-label">Apellido:</label>
-                      <input type="text" class="form-control" id="recipient-name">
+                      <input type="text" name="apellido" class="form-control" id="recipient-name">
                     </div>
                     <div class="mb-1">
                       <label for="recipient-name" class="col-form-label">Usuario:</label>
-                      <input type="text" class="form-control" id="recipient-name">
+                      <input type="text" name="usuario" class="form-control" id="recipient-name">
                     </div>  
                     <div class="mb-1">
                       <label for="recipient-name" class="col-form-label">Correo electronico:</label>
-                      <input type="text" class="form-control" id="recipient-name">
+                      <input type="text" name="correo" class="form-control" id="recipient-name">
                     </div>  
                     <div class="mb-1">
                       <label for="recipient-name" class="col-form-label">Fecha de nacimiento:</label>
-                      <input type="date" class="form-control" id="recipient-name">
+                      <input type="date" name="fechaNacimiento" class="form-control" id="recipient-name">
                     </div>
                     <div class="mb-1">
                       <label for="recipient-name" class="col-form-label">Contraseña:</label>
-                      <input type="password" class="form-control" id="recipient-name">
+                      <input type="password" name="contrasena" class="form-control" id="recipient-name">
                     </div>
                     <div class="mb-1">
                       <div class="mb-3">
                         <label for="" class="form-label">Conocimientos:</label>
-                        <select class="form-select form-select-lg" name="" id="">
-                          <option selected>Basico</option>
-                          <option value="">Intermedio</option>
-                          <option value="">Avanzado</option>
+                        <select class="form-select form-select-lg" name="nivel" id="">
+                          <option selected value="1">Basico</option>
+                          <option value="2">Intermedio</option>
+                          <option value="3">Avanzado</option>
                         </select>
                       </div>
-                      
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="submit" class="btn btn-primary">Registrar</button>
                     </div>
                   </form>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Registrar</button>
-                </div>
               </div>
             </div>
       </div>

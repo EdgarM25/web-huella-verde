@@ -39,19 +39,19 @@
     <main>
         <div class="w-100  h-100 ">
             <img src="../img/montaña-main.png" alt="" class="position-absolute w-100  h-100 ">
-            <form action="" class="position-absolute " style="    z-index: 99;">
+            <form method="POST" action="./../php/inicioSesion.php" class="position-absolute " style="    z-index: 99;">
                 <legend class="text-center fw-bold " style="color: rgb(26 139 87) !important">INICIA SESIÓN</legend>
                 <div id="warning_inicio" class="text-center ">
                     <span style="color: rgb(255, 89, 71);"></span>
                 </div>
                 <div class="margin__input">
-                     <input type="text" placeholder="Usuario" id="usuario">
+                     <input type="text" placeholder="Usuario" id="usuario" name="usuario">
                 </div>
                 <div class="margin__input">
-                     <input type="password" placeholder="Contraseña" id="contrasena">
+                     <input type="password" placeholder="Contraseña" id="contrasena" name="contrasena">
                 </div>
                 <div class="margin__input">
-                     <input type="password" placeholder="Confirmar Contraseña" id="contrasena_confirmar">
+                     <input type="password" placeholder="Confirmar Contraseña" id="contrasena_confirmar" name="contrasenaVal">
                 </div>
                 <div class="btn_entrar">
                     <input type="submit" value="Entrar" style="color: rgb(26 139 87)">
