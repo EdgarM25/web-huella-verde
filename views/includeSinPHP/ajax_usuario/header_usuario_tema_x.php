@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <header class="z-1 py-0 bg-success" style=" background:white; ">
             <div class="row" style="    width: 100%;">
                 <div class="col-2"></div>
@@ -22,7 +25,10 @@
                         font-size: calc(1.2rem + .1vw);
                         font-weight: 500;
                         " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            El nombre del usuario <i class="bi bi-person-circle"></i>
+                            <?php if(isset($_SESSION)){
+                                            echo($_SESSION['usuario']);
+                                          }
+                                          else{echo("Usuario");} ?> <i class="bi bi-person-circle"></i>
 
                         </button>
                         <ul class="dropdown-menu">

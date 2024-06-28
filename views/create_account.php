@@ -39,7 +39,7 @@
     <main>
         <div class="w-100  h-100 ">
             <img src="../img/montaña-main.png" alt="" class="position-absolute w-100  h-100 ">
-            <form action="" class="position-absolute " style="z-index: 99;">
+            <form action="../php/registro.php" method="POST" class="position-absolute " style="z-index: 99;">
                 <legend class="text-center fw-bold " >CREA UNA CUENTA</legend>
                 <div id="warning_inicio" class="text-center ">
                     <span style="color: rgb(255, 89, 71);"></span>
@@ -47,9 +47,9 @@
                 <div class="paso_uno">
                     <span style="text-align: center; display:block">¿Qué conocimientos tienes sobre educación ambiental?</span>
                     <div class="wrapper">
-                        <input type="radio" name="select" id="option-1" checked>
-                        <input type="radio" name="select" id="option-2">
-                        <input type="radio" name="select" id="option-3">
+                        <input type="checkbox" name="basico" id="option-1" checked>
+                        <input type="checkbox" name="intermedio" id="option-2">
+                        <input type="checkbox" name="avanzado" id="option-3">
                         <label for="option-1" class="option option-1">
                             <div class="dot"></div>
                             <span>Básico</span>
@@ -67,25 +67,25 @@
                 </div>
                 <div class="paso_dos" style="display:none">
                     <div class="margin__input">
-                        <input type="text" placeholder="Usuario" id="usuario">
+                        <input type="text" name="usuario" placeholder="Usuario" id="usuario">
                     </div>
                     <div class="margin__input">
-                        <input type="text" placeholder="Nombre" id="nombre">
+                        <input type="text" name="nombre" placeholder="Nombre" id="nombre">
                     </div>
                     <div class="margin__input">
-                        <input type="text" placeholder="Apellido" id="apellido">
+                        <input type="text" name="apellido" placeholder="Apellido" id="apellido">
                     </div>
                     <div class="margin__input">
-                        <input type="text" placeholder="Correo Electronico" id="correo_electronico">
+                        <input type="text" name="correo" placeholder="Correo Electronico" id="correo_electronico">
                     </div>
                     <div class="margin__input">
-                        <input type="date" title="Fecha de nacimiento" id="fecha_nacimiento">
+                        <input type="date" name="fechaNacimiento" title="Fecha de nacimiento" id="fecha_nacimiento">
                     </div>
                     <div class="margin__input">
-                        <input type="password" placeholder="Contraseña" id="contrasena">
+                        <input type="password" name="contrasena" placeholder="Contraseña" id="contrasena">
                     </div>
                     <div class="margin__input">
-                        <input type="password" placeholder="Confirmar Contraseña" id="contrasena_confirmar">
+                        <input type="password" name="val" placeholder="Confirmar Contraseña" id="contrasena_confirmar">
                     </div>
                     <div class="btn_entrar">
                         <input type="submit" value="Registrarse">

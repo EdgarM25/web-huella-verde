@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <header class ="z-1 bg-success" >
         <nav class="navbar  navbar-expand-lg" style="margin: 0rem 1rem;">
             <div class="container-fluid">
@@ -19,7 +22,11 @@
                         <a href="./views/log_in.php" class="text-decoration-none text-white" style="display:none">Cerrar sesiòn</a>
                         <div class="dropdown" >
                           <button class="btn btn-secondary dropdown-toggle h4 bg-success" style="color: white; border: 0;font-size: calc(1.2rem + .1vw);font-weight: 500;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Administrador <i class="bi bi-person-circle"></i>
+                          <?php /* if(isset($_SESSION)){
+                                            echo($_SESSION['usuario']);
+                                          }
+                                          else{echo("Administrador");} */
+                                          echo("Administrador");?> <i class="bi bi-person-circle"></i>
                           </button>
                           <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="./cambiar_clave.php">Cambiar contraseña</a></li>

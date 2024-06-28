@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include_once("../../php/admin.php");
 ?>
 
@@ -39,12 +40,16 @@
                               <a href="./views/log_in.php" class="text-decoration-none text-white" style="display:none">Cerrar sesiòn</a>
                               <div class="dropdown" >
                                   <button class="btn btn-secondary dropdown-toggle h4 bg-success" style="color: white; border: 0;font-size: calc(1.2rem + .1vw);font-weight: 500;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Administrador <i class="bi bi-person-circle"></i>
+                                    <?php /* if(isset($_SESSION)){
+                                            echo($_SESSION['usuario']);
+                                          }
+                                          else{echo("Administrador");} */
+                                          echo("Administrador");?> <i class="bi bi-person-circle"></i>
                                   </button>
                                   <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="./cambiar_clave.php">Cambiar contraseña</a></li>
                                     <li><a class="dropdown-item" Target="_blank" href="./aviso.php">Avisos</a></li>
-                                    <li><a class="dropdown-item" href="../log_in.php">Cerrar sesiòn</a></li>
+                                    <li><a class="dropdown-item" href="../../php/cerrarSesion.php">Cerrar sesiòn</a></li>
                                   </ul>
                               </div>
                           </nav>
@@ -182,74 +187,8 @@
             </div>
       </div>
       <!---Ventana modal para poder modificar los usuario-->
-      <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h2 class="modal-title fs-5 " id="exampleModalLabel">Modificar Usuario</h2>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <di class="modal-body">
-                  <form>
-                    <div class="mb-">
-                      <label for="recipient-name" class="col-form-label">Nombre:</label>
-                      <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="mb-">
-                      <label for="recipient-name" class="col-form-label">Apellido:</label>
-                      <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="mb-1">
-                      <label for="recipient-name" class="col-form-label">Usuario:</label>
-                      <input type="text" class="form-control" id="recipient-name">
-                    </div>  
-                    <div class="mb-1">
-                      <label for="recipient-name" class="col-form-label">Correo electronico:</label>
-                      <input type="text" class="form-control" id="recipient-name">
-                    </div>  
-                    <div class="mb-1">
-                      <label for="recipient-name" class="col-form-label">Fecha de nacimiento:</label>
-                      <input type="date" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="mb-1">
-                      <div class="mb-3">
-                        <label for="" class="form-label">Conocimientos:</label>
-                        <select class="form-select form-select-lg" name="" id="">
-                          <option selected>Basico</option>
-                          <option value="">Intermedio</option>
-                          <option value="">Avanzado</option>
-                        </select>
-                      </div>
-                      
-                    </div>
-                  </form>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-warning">Guardar Cambios</button>
-                </div>
-              </div>
-            </div>
-      </div>
       
       <!-- Ventana modal para poder confirmar la eliminacion de los usuarios -->
-      <div class="modal fade" id="confirmar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <div class="text-center w-100">
-                <h1 class="modal-title fs-5 fw-bold " id="exampleModalLabel">¿Estás seguro?</h1>
-                </div>
-              </div>
-              <div class="modal-body">
-                <p>Usando esta opción puedes eliminar completamente la cuenta del usuario. <span class="text-danger">Al eliminar su cuenta, ya no tendrá acceso al aprendizaje de Huella Verde.</span></p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-danger">Seguro</button>
-              </div>
-            </div>
-          </div>
-      </div>
         
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         

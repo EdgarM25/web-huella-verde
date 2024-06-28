@@ -56,12 +56,6 @@ if($contrasena == $contrasenaVal) {
                 break;
         }
     }
-    else{
-        print_r($_POST);
-        echo ("\n");
-        print_r($data);
-        echo("Usuario o contrasena incorrectos");
-    }
 }
 else{
     echo("Contrasena no coincide");
