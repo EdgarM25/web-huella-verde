@@ -31,7 +31,7 @@
 
     <main>
         <div class="container-xxl"><br>
-            <h1 class="ms-2">Avisos importantes</h1>
+            <h1 class="ms-2">Avisos importantes </h1>
             <hr>
             <ul>
               <li>Crear una cuenta: Esto te permitirá guardar tu progreso, acceder a contenido.</li>
@@ -41,7 +41,7 @@
               <li>La educación ambiental es un proceso continuo: Siempre hay algo nuevo que aprender sobre nuestro planeta.</li>
               <li>Todos podemos marcar la diferencia: Pequeños cambios en nuestro estilo de vida pueden tener un gran impacto positivo en el medio ambiente.</li>
               <li>Juntos podemos construir un futuro más sostenible: La educación ambiental es clave para crear un mundo mejor para las generaciones futuras.</li>
-            </ul>    
+            </ul>        
         </div>
     </main>
     <div class="scroll scroll_top_btn hidden" ><i class="bi bi-arrow-up"></i></div>

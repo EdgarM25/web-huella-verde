@@ -434,7 +434,7 @@
                     <span>Recursos adicionales.</span>
                     <ul>
                         <li><a href="../../../../pdf/glosario.pdf" download="Huella Verde | Glosario" >Descargue un glosario de términos</a></li>
-                        <li><a href="">	Enlaces a sitios web y recursos en línea</a></li>
+                        <li><a href="https://azulambientalistas.wordpress.com/" title="Fundación Azul Ambientalista" target="_black">	Enlaces a sitios web y recursos en línea</a></li>
                     </ul>
                 </section>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -443,9 +443,7 @@
         </div>
     </main>
     <br><br><br>
-    
     <div data-include="../../../includeSinPHP/ajax_usuario/footer_rol_usuario.php"></div>
-
     <div class="scroll scroll_top_btn hidden" ><i class="bi bi-arrow-up"></i></div>
     <script src="../../../../js/index.js"></script>
     <script src="../../../../js/include-html.js"></script>

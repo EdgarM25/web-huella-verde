@@ -3,76 +3,236 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Huella Verde | Aprende</title>
+    <title>Huella Verde | Modulo 1, tema 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="../../../../img/icono/icono-main.ico">
-    <link rel="stylesheet" href="../../../../css/reset.css">
-    <link rel="stylesheet" href="../../../../css/scrollbar.css">
+    <link rel="icon" type="image/x-icon" href="../../../../../img/icono/icono-main.ico">
+    <link rel="stylesheet" href="../../../../../css/reset.css">
+    <link rel="stylesheet" href="../../../../../css/scrollbar.css">
+    <linkrel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <style>
-     
-    .scroll {
-        position: fixed;
-        bottom: 1rem;
-        right: 1rem;
-        background-color: rgb(26 139 87);
-        width: 60px;
-        height: 60px;
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        border-radius: 10%;
-        vertical-align: middle;
-        text-decoration: none;
-        text-align: center;
-        transition: 0.2s ease-out;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        color: #FFF;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 1s ease-out;
-        color: white;
-    }
-    
-    .scroll:hover {
-        color: rgb(13,54 , 156);
-        cursor: pointer;
-    }
-
-    
-    .hidden {
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="../../../../../css/usuario/modulo.css">
     </head>
   <body style="background: rgb(234 255 246); position:relative">
-   
-  <div data-include="../../../../includeSinPHP/header_rol_usuario.php"></div>
-
-    <main>
+    <div data-include="../../../../includeSinPHP/ajax_usuario/header_usuario_tema_x.php"></div>
+    <main><br><br>
         <div class="container-xl h-100 w-100">
-            <div class="bg-white w-100 h-100">
-                <h1>Modulo/Tema 1:Introducción a la educación ambiental sostenible</h1>
+            <div class="d-flex" style="display:flex;display: flex;flex-direction: column;height: 70vh;padding: 1rem;background: white;border-radius: 1rem;box-shadow: 0px 4px 0px green;border: solid 2px green;">
+                <div class="bg-white w-100 title" >
+                    <div class="d-flex" style="justify-content: center;align-items: center;  justify-content: center;align-items: center;justify-content:center;align-items: center;color: white;border-radius: 0.5rem;margin-bottom: 0.5rem;gap:1rem">
+                        <div>  
+                            <a href="../inicio.php"> <i class="bi bi-x-lg fs-2 " style="color:grey"></i></a>
+                        </div>
+                        <div style="flex-grow: 2;">
+                            <div class="progress " role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-success" style="width: 10%">10%</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="bi bi-star-fill fs-1 text-warning me-2"></i>
+                                <span class=" start text-warning fs-3" >0</span>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+              <div class="container_aprende" style="flex-grow: 2;">
+                  <div class="container_pregunta">
+                      <h3 class="typed_1"></h3> 
+                  </div>
+              </div> 
+              <div class="boton" style="display: flex;justify-content: center;margin: 0rem 3rem;">
+                  <div class="row justify-content-center" >
+                    <div class="col-12">
+                        <i class="bi bi-arrow-right-circle fs-1 text-success" data-keep-reading="2"></i>
+                    </div>
+                  </div>
+                  <button class="btn btn-success verification_button" style="box-shadow: 0px 4px 0px #173917; display:none" data-siguiente="2" data-verificar="true" >COMPROBAR</button>
+              </div>
+              
             </div>
         </div>
     </main>
-   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <footer class="py-4 w-100 " style="background: rgb(48, 48, 48);">
-        <div class="d-flex flex-row flex-wrap" style=" margin: 0 auto;width: 90% ; justify-content: center">
-            <div class="mt-3">
-                <p style="color: white;">© 2024 Huella verde· Todos los derechos reservados | Política de privacidad | Aviso legal | Política de cookies | Contacto</p>
+    <div class="marco" style="display: none;" >
+      <div class="tiempo" id="tiempo">00:00:00.000</div>
+      <div class="botones-contenedor">
+        <div class="btn" onclick="iniciar()">
+          <i class="fas fa-play"></i>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br><br>
+    <div data-include="../../../../includeSinPHP/ajax_usuario/footer_rol_usuario.php"></div>
+    <script src="../../../../../js/index.js"></script>
+    <script src="../../../../../js/include-html.js"></script>
+    <div class="container-modal" style="display: none;">
+        <div class="w-auto" style="padding-bottom:1rem ;max-width: 500px; min-width: 100px; background: white !important; border-radius: 1rem;">
+            <h2 class="" style="    background: #198754; padding: 1rem; color: white; text-align: center;"> ¡Completaste la lección! </h2> 
+            <div class="conjunto">
+                <div class="row" style="padding:1rem 1rem">
+                    <div class="col-6 text-center">
+                        <span class=" p-1 px-2 text-white m-1" style="background: rgb(47,47,47);border-radius: 1rem;">Estrella(s)</span><br>
+                        <i class="bi bi-star fs-1 border-warning" style="color:rgb(47,47,47)"><span class="cantidad-estrellas fs-4"></span></i>
+                    </div>
+                    <div class="col-6 text-center">
+                        <span class=" p-1 px-2 text-white m-1" style="background: rgb(47,47,47);border-radius: 1rem;">Velocidad</span><br>
+                        <i class="bi bi-speedometer fs-1" style="color:rgb(47,47,47)" ><span class="veloz fs-4"></span></i>
+                    </div>
+                    </div>
+                    <div class="row text-center">
+                    <div class="col-6">
+                        <a href="./tema_1.php" class="text-decoration-none text-secondary"> REPASAR LA LECCIÓN</a>
+                    </div>
+                    <div class="col-6">
+                        <a class="text-decoration-none text-success fw-bold" href="../inicio.php" >CONTINUAR</a>    
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+    <div class="container-modal-respuesta-incorrecta" style="display: none;" >
+        <div class="w-auto" style="padding-bottom:1rem ;max-width: 500px; min-width: 100px; background: rgb(255 214 215) ; border-radius: 1rem;">
+            <div class="bg-danger pt-2">
+                <h2 style="padding:0.6rem; color: white; text-align: center;"> ¡Respuesta incorrecta! </h2> 
+            </div>
+            <div class="row text-center" style="padding:1rem 1rem">
+                <div class="col-12">
+                    <button class="text-decoration-none fw-bold verificar" style="color: rgb(255 75 75);" href="../inicio.php" >CONTINUAR</button>    
+                </div>
             </div>
         </div>
-    </footer>
-
-    <div class="scroll scroll_top_btn hidden" ><i class="bi bi-arrow-up"></i></div>
-    <script src="../../../../js/index.js"></script>
-    <script src="../../../../../js/include-html.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </div>
+    <script>
+        "use strict";
+        const $container = document.querySelector(".container_aprende");
+        const $siguiente = document.querySelector("[data-siguiente]");
+        const $progress_bar = document.querySelector(".progress-bar");
+        const $btn = document.querySelector(".boton > .btn");
+        const $start = document.querySelector(".start");
+        const $data_keep_reading = document.querySelector("[data-keep-reading]");
+            const typed = new Typed(".typed_1", {
+                strings: [`<strong class="title">¡Prepárate para ser un agente de cambio!</strong> <br> 
+                    ¡Hola! Bienvenido al Módulo 6, donde exploraremos cómo tú puedes ser parte de la solución hacia un futuro más sostenible. 
+                    En este módulo, nos adentraremos en temas como la huella ecológica, el consumo responsable, la alimentación sostenible y
+                    la movilidad eco-eficiente. Te aseguro que será un viaje entretenido y lleno de acciones que puedes tomar para marcar la
+                    diferencia.
+                    `],
+                typeSpeed: 25,
+                showCursor: false, // Mostrar cursor palpitanto
+            });
+            function read_2() {
+                const typed = new Typed(".typed_1", {
+                    strings: [`<strong class="title">¿En qué consiste este módulo?</strong><br>
+                    <p>A lo largo de este módulo, descubrirás:</p>
+                    <ul>
+                    <li><strong>Tu huella ecológica:</strong>
+                    ¿Qué impacto tiene tu estilo de vida en el planeta? Aprende a calcularla y descubre cómo reducirla.
+                    </li>
+                     <li><strong>Consumo responsable: </strong>
+                    Conviértete en un consumidor consciente y toma decisiones informadas que beneficien al medio ambiente y a tu bolsillo.
+                    </li>
+                    <li> <strong>Alimentación sostenible: </strong>
+                    Disfruta de una dieta deliciosa y nutritiva que sea amigable con el planeta y tu salud.</li>
+                    <li> <strong>Movilidad sostenible: </strong>
+                    Muévete de manera eco-eficiente y reduce tu huella de carbono.</li>
+                    `],
+                    typeSpeed: 25,
+                    showCursor: false, // Mostrar cursor palpitanto
+                });
+                $data_keep_reading.setAttribute("data-keep-reading", "3");
+            }                        
+            function read_3() {
+                const typed = new Typed(".typed_1", {
+                    strings: [`<strong class="title">¿Por qué es importante este módulo?</strong> <br> 
+                    La sostenibilidad no es solo un tema para expertos, ¡todos podemos contribuir! Cada acción, por pequeña que parezca, 
+                    suma para crear un futuro más verde y justo. En este módulo, te daremos las herramientas y la inspiración que necesitas
+                    para convertirte en un agente de cambio.
+                    `],
+                    typeSpeed: 25,
+                    showCursor: false, // Mostrar cursor palpitanto
+                });
+                $data_keep_reading.setAttribute("data-keep-reading", "4");
+            }    
+            function read_4() {
+                const typed = new Typed(".typed_1", {
+                    strings: [`<strong class="title">¿Qué te espera en este módulo?</strong> 
+                            <br> 
+                            Prepárate para:
+                            <ul>
+                                <li><b>Lecturas entretenidas y fáciles de entender.</b> Aborda el medio ambiente desde diferentes perspectivas, como 
+                                la biología, la química, la economía y la sociología.</li>
+                                <li><b>Actividades prácticas para poner en marcha lo aprendido.</b> </li>
+                                <li><b>Recursos útiles para seguir profundizando en el tema.</b></li>
+                                <li><b>Un espacio para compartir ideas y experiencias con otros participantes.</b></li>         
+                            </ul>
+                            `],
+                    typeSpeed: 25,
+                    showCursor: false, // Mostrar cursor palpitanto
+                });
+                $data_keep_reading.setAttribute("data-keep-reading", "5");
+            }
+            function read_5() {
+                const typed = new Typed(".typed_1", {
+                    strings: [`<strong class="title">¡Comencemos este viaje juntos!</strong> <br>
+                            En las próximas semanas, exploraremos cada uno de los temas mencionados anteriormente. Te invitamos a leer con atención, 
+                            participar en las actividades y compartir tus ideas. Recuerda que, juntos, podemos crear un futuro más sostenible.
+                            </b>`],
+                    typeSpeed: 25,
+                    showCursor: false, // Mostrar cursor palpitanto
+                });
+                $data_keep_reading.setAttribute("data-keep-reading", "6");
+            }    
+            function read_6() {
+                const typed = new Typed(".typed_1", {
+                    strings: [`<strong class="title">Para empezar, te proponemos un reto:</strong> <br>
+                            Calcula tu huella ecológica utilizando una calculadora online. ¿Qué te sorprende
+                            del resultado? ¿Qué acciones puedes tomar para reducirla? Comparte tus reflexiones en el foro del curso.
+                            <b>¡Anímate a ser parte del cambio!</b>
+                            `],
+                    typeSpeed: 25,
+                    showCursor: false, // Mostrar cursor palpitanto
+                });
+                $data_keep_reading.setAttribute("data-keep-reading", "7_end");
+            }         
+            function read_end() {
+                const $boton = document.querySelector(".boton");
+                $boton.removeChild($boton.children[0]);
+                pregunta_1();
+                $siguiente.removeAttribute("style");
+            }               
+            function validar_siguiente_lectura() {
+                switch ($data_keep_reading.getAttribute("data-keep-reading")) {
+                    case "2":
+                        read_2();
+                        break;
+                    case "3":
+                        read_3();
+                        break;
+                    case "4":
+                        read_4();
+                        break;
+                    case "5":
+                        read_5();
+                        break;
+                    case "6":
+                        read_6();
+                    break;
+                    case "7_end":
+                        read_end();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            $data_keep_reading.addEventListener("click", e => {
+                validar_siguiente_lectura();
+            });
+    </script>
+    <script src="../../../../../js/usuario/basico/modulo_1_leccion_1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous">
+    </script>
   </body>
 </html>

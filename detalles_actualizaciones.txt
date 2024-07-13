@@ -14,3 +14,4 @@ v4. Mejora del index.html y vistas de modulos.
 v4.1 Conexion de BD, registro de usuario admin, incio de sesion.
 v4.2 Funcionabilidad de modificar, eliminar, mas crear usuario desde el index.
 v4.3 Identificacion de Header Usuarios, Administrador.
+v4.4 Modificacion de titulos de modulos, Primera leccion del primer modulo.

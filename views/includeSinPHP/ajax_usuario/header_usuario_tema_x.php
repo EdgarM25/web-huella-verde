@@ -18,26 +18,18 @@
                 <div class="collapse navbar-collapse " style="  flex-grow: 1;" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-1 w-100  mt-2  mb-lg-0" style="justify-content: end;">
                     <div class="dropdown  bg-success">
-                        <button class="btn btn-secondary dropdown-toggle h4  bg-success" style="    
-                        color: white;
-                        border: 0;
-                        background: rgb(47,47,47);
-                        font-size: calc(1.2rem + .1vw);
-                        font-weight: 500;
-                        " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle h4  bg-success" style="    color: white;border: 0;background: rgb(47,47,47);font-size: calc(1.2rem + .1vw);font-weight: 500;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <?php if(isset($_SESSION)){
                                             echo($_SESSION['usuario']);
                                           }
                                           else{echo("Usuario");} ?> <i class="bi bi-person-circle"></i>
-
                         </button>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="../inicio.php">Inicio</a></li>
                         <li><a class="dropdown-item" href="../progreso.php">Progreso</a></li>
                         <li><a class="dropdown-item" target="_blank" href="../aviso.php">Avisos </a></li>
                         <li><a class="dropdown-item" href="../../../../log_in.php">Cerrar sesion</a></li>
-                        </ul>
-                    
+                        </ul>              
                 </div>
                     </ul>
                 </div>
